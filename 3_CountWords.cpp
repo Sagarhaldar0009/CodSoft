@@ -26,20 +26,20 @@ int main() {
     ifstream inputFile(filename);
 
     if (!inputFile) {
-        cerr << "Error: Unable to open the file." << endl;
+        cerr << "Error: File doesn't Exist. " << endl;
         return 1;
     }
 
     string line;
-    int totalWords = 0;
+    int totalNumberOfWords = 0;
 
     while (getline(inputFile, line)) {
-        totalWords += countWords(line);
+        totalNumberOfWords += countWords(line);
     }
 
     inputFile.close();
 
-    cout << "Total word count in the file: " << totalWords << endl;
+    cout << "Total number of words in the file: " << totalNumberOfWords << endl;
 
     return 0;
 }
